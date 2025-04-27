@@ -1,5 +1,5 @@
 import pickle
-from sklearn.metrics import fbeta_score, precision_score
+from sklearn.metrics import fbeta_score, precision_score, recall_score
 from sklearn.ensemble import RandomForestClassifier
 from ml.data import process_data
 # TODO: add necessary import
@@ -134,5 +134,5 @@ def performance_on_categorical_slice(
     preds = inference(model, X_slice)
 
     precision, recall, fbeta = compute_model_metrics(y_slice, preds)
-    
+
     return precision, recall, fbeta
